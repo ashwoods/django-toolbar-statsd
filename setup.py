@@ -1,10 +1,14 @@
+import os
 from setuptools import setup, find_packages
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name='django-toolbar-statsd',
     version='0.1',
     description='',
-    long_description='',
+    long_description=read('README.rst'),
     author='Andy McKay',
     author_email='andym@mozilla.com',
     license='BSD',
